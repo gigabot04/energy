@@ -61,7 +61,7 @@ exports.webp = createWebp;
 const sprite = () => {
   return gulp.src("source/img/icon/**/*.svg")
     .pipe(svgstore())
-    .pipe(rename("sptire.svg"))
+    .pipe(rename("sprite.svg"))
     .pipe(gulp.dest("build/img"))
 }
 
@@ -86,9 +86,10 @@ const server = (done) => {
     server: {
       baseDir: "build"
     },
-    cors: true,
     notify: false,
-    ui: false,
+    open: true,
+    cors: true,
+    ui: false
   });
   done();
 }
@@ -102,6 +103,8 @@ const watcher = () => {
   gulp.watch("source/*.html", gulp.series("html"));
   gulp.watch("source/js/**/*.js", gulp.series("uglify"));
   gulp.watch("source/*.html").on("change", sync.reload);
+  gulp.watch("source/sass/**/*.scss").on("change", sync.reload);
+  gulp.watch("source/js/**/*.js").on("change", sync.reload);
 }
 
 // Copy
@@ -128,7 +131,6 @@ const clean = () => {
 const html = () => {
   return gulp.src("source/*.html")
     .pipe(gulp.dest("build"))
-    .pipe(sync.stream());
 }
 
 exports.html = html;

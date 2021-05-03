@@ -1,0 +1,68 @@
+.basic {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-image: url("../img/turbin-desktop@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-top: -92px;
+  background-color: $black;
+  min-height: 750px;
+  
+}
+
+.basic__wrap {
+  max-width: 863px;
+  margin-top: 240px;
+
+  & h1 {
+    font-weight: bold;
+    font-size: 57px;
+    line-height: 151%;
+    text-transform: uppercase;
+    color: $light-grey;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 9px;
+  
+    & span {
+      font-style: normal;
+      font-weight: 300;
+      font-size: 26px;
+      line-height: 151.5%;
+      display: block;
+      margin-bottom: 10px;
+      position: relative;
+
+      &::after,
+      &::before {
+        content: "";
+        width: 230px;
+        height: 1px;
+        background-color: $light-grey;
+        position: absolute;
+        top: 49%;
+        left: 26px;
+        transform: translateY(-50%);
+      }
+
+      &::before {
+        left: auto;
+        right: 26px;
+        top: 53%;
+      }
+    }
+  }
+
+  & p {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 180%;
+    color: $light-grey;
+    text-align: center;
+    margin: 0;
+    max-width: 649px;
+    margin: 0 auto;
+  }
+}
