@@ -1,1 +1,1 @@
-"use strict";{const a=document.querySelector(".header__btn"),b=document.querySelector(".header__nav");a.addEventListener("click",e=>{e.preventDefault(),a.classList.toggle("header__btn--active"),b.classList.toggle("header__nav--active")})}
+"use strict";{const a=document.querySelector(".header__btn"),b=document.querySelector(".header__nav"),c=document.querySelector(".body");a.addEventListener("click",e=>{e.preventDefault(),a.classList.toggle("header__btn--active"),b.classList.toggle("header__nav--active"),c.classList.toggle("body__js")})}

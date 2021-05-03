@@ -70,6 +70,9 @@
 *::after {
   box-sizing: border-box; }
 
+.body__js {
+  overflow: hidden; }
+
 a {
   text-decoration: none; }
 
@@ -430,8 +433,9 @@ template {
 @media (max-width: 1200px) {
   .header__nav {
     display: none;
+    overflow: scroll;
     flex-direction: column;
-    position: absolute;
+    position: fixed;
     box-shadow: 0 0 20px #000000;
     width: 300px;
     top: 0;
@@ -442,11 +446,12 @@ template {
     padding: 103px 15px 15px;
     z-index: 1; }
     .header__nav a {
+      display: block;
       font-size: 18px;
       line-height: 22px;
       margin-bottom: 18px; }
     .header__nav--active {
-      display: flex; }
+      display: block; }
       .header__nav--active .header__nav-contact {
         display: flex; } }
 
@@ -539,13 +544,14 @@ template {
   @media (max-width: 1200px) {
     .basic {
       align-items: flex-start;
-      padding-top: 220px; } }
-  @media (max-width: 1200px) {
+      padding-top: 218px; } }
+  @media (max-width: 767px) {
     .basic {
       padding-top: 176px; } }
 
 .basic__wrap {
-  max-width: 863px; }
+  max-width: 870px;
+  margin-top: -168px; }
   .basic__wrap h1 {
     font-weight: bold;
     font-size: 57px;
@@ -555,27 +561,22 @@ template {
     text-align: center;
     margin: 0;
     margin-bottom: 9px; }
-    .basic__wrap h1 span {
-      font-style: normal;
-      font-weight: 300;
-      font-size: 26px;
-      line-height: 151.5%;
-      display: block;
-      margin-bottom: 10px;
-      position: relative; }
-      .basic__wrap h1 span::after, .basic__wrap h1 span::before {
-        content: "";
-        width: 230px;
-        height: 1px;
-        background-color: #dddddd;
-        position: absolute;
-        top: 49%;
-        left: 26px;
-        transform: translateY(-50%); }
-      .basic__wrap h1 span::before {
-        left: auto;
-        right: 26px;
-        top: 53%; }
+  .basic__wrap fieldset {
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    padding: 0; }
+  .basic__wrap legend {
+    color: #dddddd;
+    text-transform: uppercase;
+    text-align: center;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 23px;
+    line-height: 151.5%;
+    display: block;
+    margin-bottom: 10px;
+    padding: 0 28px; }
   .basic__wrap p {
     font-weight: 300;
     font-size: 16px;
@@ -587,34 +588,23 @@ template {
     margin: 0 auto; }
   @media (max-width: 1200px) {
     .basic__wrap {
-      max-width: 100%; }
+      max-width: 100%;
+      margin-top: 0; }
       .basic__wrap h1 {
         font-size: 45px;
         margin-bottom: 18px; }
-        .basic__wrap h1 span {
-          font-size: 24px;
-          margin-bottom: 16px; }
-          .basic__wrap h1 span::after, .basic__wrap h1 span::before {
-            width: 193px;
-            left: -27px;
-            top: 43%; }
-          .basic__wrap h1 span::before {
-            left: auto;
-            right: -27px; } }
+      .basic__wrap legend {
+        font-size: 21px;
+        margin-bottom: 23px;
+        padding: 0 42px; } }
   @media (max-width: 767px) {
     .basic__wrap h1 {
-      font-size: 23px;
+      font-size: 28px;
       margin-bottom: 19px; }
-      .basic__wrap h1 span {
-        font-size: 12px;
-        margin-bottom: 19px; }
-        .basic__wrap h1 span::after, .basic__wrap h1 span::before {
-          width: 69px;
-          left: 0;
-          top: 43%; }
-        .basic__wrap h1 span::before {
-          left: auto;
-          right: 0; }
+    .basic__wrap legend {
+      font-size: 14px;
+      margin-bottom: 19px;
+      padding: 0 5px; }
     .basic__wrap p {
-      font-size: 10px;
+      font-size: 14px;
       padding: 0 15px; } }

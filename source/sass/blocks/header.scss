@@ -58,8 +58,9 @@
 
   @media (max-width: $tablet-width) {
     display: none;
+    overflow: scroll;
     flex-direction: column;
-    position: absolute;
+    position: fixed;
     box-shadow: 0 0 20px $black;
     width: 300px;
     top: 0;
@@ -71,13 +72,14 @@
     z-index: 1;
 
     & a {
+      display: block;
       font-size: 18px;
       line-height: 22px;
       margin-bottom: 18px;
     }
 
     &--active {
-      display: flex;
+      display: block;
 
       & .header__nav-contact {
         display: flex;

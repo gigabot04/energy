@@ -14,17 +14,18 @@
   
   @media (max-width: $tablet-width) {
     align-items: flex-start;
-    padding-top: 220px;
+    padding-top: 218px;
   }
 
-  @media (max-width: $tablet-width) {
+  @media (max-width: $mobile-width) {
     padding-top: 176px;
   }
   
 }
 
 .basic__wrap {
-  max-width: 863px;
+  max-width: 870px;
+  margin-top: -168px;
 
   & h1 {
     font-weight: bold;
@@ -35,34 +36,26 @@
     text-align: center;
     margin: 0;
     margin-bottom: 9px;
-  
-    & span {
-      font-style: normal;
-      font-weight: 300;
-      font-size: 26px;
-      line-height: 151.5%;
-      display: block;
-      margin-bottom: 10px;
-      position: relative;
+  }
 
-      &::after,
-      &::before {
-        content: "";
-        width: 230px;
-        height: 1px;
-        background-color: $light-grey;
-        position: absolute;
-        top: 49%;
-        left: 26px;
-        transform: translateY(-50%);
-      }
+  & fieldset {
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    padding: 0;
+  }
 
-      &::before {
-        left: auto;
-        right: 26px;
-        top: 53%;
-      }
-    }
+  & legend {
+    color: $light-grey;
+    text-transform: uppercase;
+    text-align: center;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 23px;
+    line-height: 151.5%;
+    display: block;
+    margin-bottom: 10px;
+    padding: 0 28px;
   }
 
   & p {
@@ -78,55 +71,34 @@
 
   @media (max-width: $tablet-width) {
     max-width: 100%;
+    margin-top: 0;
 
     & h1 {
       font-size: 45px;
       margin-bottom: 18px;
+    }
 
-      & span {
-        font-size: 24px;
-        margin-bottom: 16px;
-
-        &::after,
-        &::before {
-          width: 193px;
-          left: -27px;
-          top: 43%;
-        }
-
-        &::before {
-          left: auto;
-          right: -27px;
-        }
-      }
+    & legend {
+      font-size: 21px;
+      margin-bottom: 23px;
+      padding: 0 42px;
     }
   }
 
   @media (max-width: $mobile-width) {
     & h1 {
-      font-size: 23px;
+      font-size: 28px;
       margin-bottom: 19px;
+    }
 
-      & span {
-        font-size: 12px;
-        margin-bottom: 19px;
-
-        &::after,
-        &::before {
-          width: 69px;
-          left: 0;
-          top: 43%;
-        }
-
-        &::before {
-          left: auto;
-          right: 0;
-        }
-      }
+    & legend {
+      font-size: 14px;
+      margin-bottom: 19px;
+      padding: 0 5px;
     }
 
     & p {
-      font-size: 10px;
+      font-size: 14px;
       padding: 0 15px;
     }
   }
