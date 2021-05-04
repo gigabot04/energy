@@ -1,7 +1,7 @@
 .basic {
   display: flex;
-  justify-content: center;
   align-items: center;
+  flex-direction: column;
   flex-wrap: wrap;
   background-image: url("../img/turbin-desktop@1x.jpg");
   background-repeat: no-repeat;
@@ -13,19 +13,23 @@
   min-height: 750px;
   
   @media (max-width: $tablet-width) {
-    align-items: flex-start;
-    padding-top: 218px;
+    padding-top: 204px;
+    margin-top: -78px;
+    
   }
 
   @media (max-width: $mobile-width) {
-    padding-top: 176px;
+    padding-top: 131px;
+    margin-top: -63px;
+    min-height: 535px;
   }
   
 }
 
 .basic__wrap {
   max-width: 870px;
-  margin-top: -168px;
+  margin-top: 144px;
+  margin-bottom: 75px;
 
   & h1 {
     font-weight: bold;
@@ -72,6 +76,7 @@
   @media (max-width: $tablet-width) {
     max-width: 100%;
     margin-top: 0;
+    margin-bottom: 145px;
 
     & h1 {
       font-size: 45px;
@@ -86,6 +91,8 @@
   }
 
   @media (max-width: $mobile-width) {
+    margin-bottom: 18px;
+
     & h1 {
       font-size: 28px;
       margin-bottom: 19px;
@@ -103,3 +110,25 @@
     }
   }
 }
+
+.basic__foo {
+ max-width: 1200px;
+ width: 100%;
+ padding: 0 15px;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ flex-wrap: wrap;
+}
+
+.basic__contact {
+  & a {
+    margin-left: 30px;
+  }
+
+  & svg {
+    width: 23px;
+    height: 23px;
+  }
+}
+
