@@ -396,7 +396,7 @@ template {
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: center; }
-  @media (max-width: 1200px) {
+  @media (max-width: 1199px) {
     .header {
       padding: 26px 15px 0; } }
 
@@ -430,7 +430,7 @@ template {
   .header__nav a:active {
     color: rgba(221, 221, 221, 0.7); }
 
-@media (max-width: 1200px) {
+@media (max-width: 1199px) {
   .header__nav {
     display: none;
     overflow: scroll;
@@ -461,7 +461,7 @@ template {
 
 .header__nav-contact {
   display: none; }
-  @media (max-width: 1200px) {
+  @media (max-width: 1199px) {
     .header__nav-contact {
       flex-direction: column;
       position: relative;
@@ -516,7 +516,7 @@ template {
     display: none; }
   .header__btn--active span:last-of-type {
     display: inline; }
-  @media (max-width: 1200px) {
+  @media (max-width: 1199px) {
     .header__btn {
       display: block; }
       .header__btn--active::after, .header__btn--active::before {
@@ -545,7 +545,7 @@ template {
   padding-top: 100px;
   background-color: #000000;
   min-height: 750px; }
-  @media (max-width: 1200px) {
+  @media (max-width: 1199px) {
     .basic {
       padding-top: 204px;
       margin-top: -78px; } }
@@ -593,7 +593,7 @@ template {
     margin: 0;
     max-width: 649px;
     margin: 0 auto; }
-  @media (max-width: 1200px) {
+  @media (max-width: 1199px) {
     .basic__wrap {
       max-width: 100%;
       margin-top: 0;
@@ -640,7 +640,7 @@ template {
   padding: 0 15px;
   margin: 0 auto;
   margin-top: -125px; }
-  @media (max-width: 1200px) {
+  @media (max-width: 1199px) {
     .connect {
       padding: 0 34px;
       width: 100%; } }
@@ -715,7 +715,7 @@ template {
     width: 37%;
     height: 1px;
     background-color: rgba(242, 112, 57, 0.35); }
-  @media (max-width: 1200px) {
+  @media (max-width: 1199px) {
     .advantages h2 {
       padding-left: 48px; }
     .advantages::after {
@@ -735,7 +735,7 @@ template {
   max-width: 1210px;
   padding: 0 15px;
   margin: 0 auto; }
-  @media (max-width: 1200px) {
+  @media (max-width: 1199px) {
     .advantages__wrap {
       justify-content: space-around; } }
 
@@ -764,6 +764,76 @@ template {
     color: #2c2c2c;
     margin: 0;
     margin-top: 25px; }
-  @media (max-width: 1200px) {
+  @media (max-width: 1199px) {
     .advantages__item {
       margin-bottom: 72px; } }
+
+.portfolio {
+  background-color: #101010;
+  color: #ffffff;
+  padding: 104px 0;
+  margin-top: 123px; }
+  .portfolio h2 {
+    font-weight: 600;
+    font-size: 27px;
+    line-height: 151%;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 20px; }
+  .portfolio p {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 180%;
+    text-align: center;
+    margin: 0; }
+  @media (max-width: 1199px) {
+    .portfolio {
+      margin-top: 36px; } }
+  @media (max-width: 767px) {
+    .portfolio {
+      padding: 50px 0; }
+      .portfolio h2 {
+        padding: 0 30px; }
+      .portfolio p {
+        padding: 0 15px; } }
+
+.portfolio__container {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0 25px;
+  margin-top: 54px; }
+  @media (max-width: 1199px) {
+    .portfolio__container {
+      padding: 0 15px;
+      max-width: 100%; } }
+
+.portfolio__slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover; }
+
+.portfolio__btn {
+  top: 47%;
+  width: 55px;
+  height: 55px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%; }
+  .portfolio__btn::after {
+    content: "";
+    width: 16px;
+    height: 16px;
+    font-family: none;
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    border-bottom: none;
+    border-right: none; }
+  .portfolio__btn--left {
+    transform: rotate(-45deg);
+    left: -1px; }
+  .portfolio__btn--right {
+    transform: rotate(135deg);
+    right: -1px; }
+  @media (max-width: 1199px) {
+    .portfolio__btn {
+      display: none; } }

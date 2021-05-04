@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Energo Stab</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="body">
@@ -103,7 +104,30 @@
         </div>
       </div>
     </section>
+    <section class="portfolio">
+      <h2>Порфолио наших работ </h2>
+      <p>Гарантируем качество исполнения, оригинальные запчасти и доступную стоимость</p>
+      <div class="portfolio__container swiper-container">
+        <div class="swiper-wrapper">
+          <div class="portfolio__slide swiper-slide">
+            <img src="img/work1-desktop@1x.jpg" alt="work photo">
+          </div>
+          <div class="portfolio__slide swiper-slide">
+            <img src="img/work2-desktop@1x.jpg" alt="work photo">
+          </div>
+          <div class="portfolio__slide swiper-slide">
+            <img src="img/work4-desktop.jpg" alt="work photo">
+          </div>
+          <div class="portfolio__slide swiper-slide">
+            <img src="img/work3-desktop@1x.jpg" alt="work photo">
+          </div>
+        </div>
+        <div class="portfolio__btn portfolio__btn--left swiper-button-prev"></div>
+        <div class="portfolio__btn portfolio__btn--right swiper-button-next"></div>
+      </div>
+    </section>
   </main>
-  <script src="js/menu.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

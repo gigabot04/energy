@@ -11,6 +11,7 @@ const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const uglify = require("gulp-uglify");
+const concat = require("gulp-concat");
 const del = require("del");
 
 // Styles
@@ -71,13 +72,15 @@ exports.sprite = sprite;
 
 const js = () => {
   return gulp.src(
-    "source/js/**/*.js",
+    "source/js/*.js"
   )
+    .pipe(concat("main.js"))
     .pipe(uglify())
     .pipe(gulp.dest("build/js"))
 }
 
 exports.uglify = js;
+
 
 // Server
 
