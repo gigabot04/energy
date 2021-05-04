@@ -644,7 +644,7 @@ template {
     .connect {
       padding: 0 34px;
       width: 100%; } }
-  @media (max-width: 1200px) {
+  @media (max-width: 767px) {
     .connect {
       padding: 0 11px;
       margin-top: -70px; } }
@@ -665,7 +665,7 @@ template {
     line-height: 151%;
     text-transform: uppercase;
     margin: 0;
-    margin-top: 80px; }
+    margin-top: 60px; }
   .connect__wrap p {
     font-weight: 300;
     font-size: 16px;
@@ -694,4 +694,76 @@ template {
         font-size: 14px;
         margin-top: 9px; }
       .connect__wrap a {
-        width: 100%; } }
+        width: 270px; } }
+
+.advantages {
+  position: relative;
+  margin-top: 105px; }
+  .advantages h2 {
+    font-weight: 600;
+    font-size: 27px;
+    line-height: 151%;
+    text-transform: uppercase;
+    text-align: center;
+    color: #3d3e40;
+    margin-bottom: 78px; }
+  .advantages::after {
+    content: "";
+    position: absolute;
+    top: 18px;
+    left: 0;
+    width: 37%;
+    height: 1px;
+    background-color: rgba(242, 112, 57, 0.35); }
+  @media (max-width: 1200px) {
+    .advantages h2 {
+      padding-left: 48px; }
+    .advantages::after {
+      width: 30%; } }
+  @media (max-width: 767px) {
+    .advantages h2 {
+      padding-left: 0;
+      padding: 0 25px; }
+    .advantages::after {
+      content: none; } }
+
+.advantages__wrap {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1210px;
+  padding: 0 15px;
+  margin: 0 auto; }
+  @media (max-width: 1200px) {
+    .advantages__wrap {
+      justify-content: space-around; } }
+
+.advantages__item {
+  width: 270px;
+  min-height: 100px;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap; }
+  .advantages__item h3 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 151.5%;
+    color: #3d3e40;
+    text-transform: uppercase;
+    width: 70%;
+    margin: 0;
+    padding-left: 33px;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content; }
+  .advantages__item p {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 180%;
+    color: #2c2c2c;
+    margin: 0;
+    margin-top: 25px; }
+  @media (max-width: 1200px) {
+    .advantages__item {
+      margin-bottom: 72px; } }
