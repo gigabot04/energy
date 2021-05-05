@@ -770,7 +770,13 @@ template {
     margin-top: 25px; }
   @media (max-width: 1199px) {
     .advantages__item {
-      margin-bottom: 72px; } }
+      margin-bottom: 72px;
+      width: 45%; } }
+  @media (max-width: 767px) {
+    .advantages__item {
+      width: 100%; }
+      .advantages__item h3 {
+        text-align: center; } }
 
 .portfolio {
   position: relative;
