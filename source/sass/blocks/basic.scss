@@ -66,7 +66,7 @@
     width: 0;
     overflow: hidden;
     transform: translateY(-100%);
-    animation: legend 2s ease forwards 2.5s;
+    animation: legend1200 2s ease forwards 2.5s;
   }
 
   & p {
@@ -93,7 +93,7 @@
     & legend {
       font-size: 21px;
       margin-bottom: 23px;
-      padding: 0 42px;
+      animation: legend768 2s ease forwards 2.5s;
     }
   }
 
@@ -108,7 +108,7 @@
     & legend {
       font-size: 14px;
       margin-bottom: 19px;
-      padding: 0 5px;
+      animation: legend320 2s ease forwards 2.5s;
     }
 
     & p {
@@ -158,21 +158,55 @@
   }
 }
 
-@keyframes legend {
+@keyframes legend1200 {
   0% {
     width: 0;
-    transform: translateY(-100%);
+    transform: translateY(-200%);
     padding: 0;
   }
   40% {
     width: 398px;
-    transform: translateY(-100%);
+    transform: translateY(-200%);
     padding: 0;
   }
   100% {
     width: 398px;
     transform: translateY(0);
     padding: 0 28px;
+  }
+}
+@keyframes legend768 {
+  0% {
+    width: 0;
+    transform: translateY(-200%);
+    padding: 0;
+  }
+  40% {
+    width: 358px;
+    transform: translateY(-200%);
+    padding: 0;
+  }
+  100% {
+    width: 358px;
+    transform: translateY(0);
+    padding: 0 42px;
+  }
+}
+@keyframes legend320 {
+  0% {
+    width: 0;
+    transform: translateY(-200%);
+    padding: 0;
+  }
+  40% {
+    width: 187px;
+    transform: translateY(-200%);
+    padding: 0;
+  }
+  100% {
+    width: 187px;
+    transform: translateY(0);
+    padding: 0 5px;
   }
 }
 
