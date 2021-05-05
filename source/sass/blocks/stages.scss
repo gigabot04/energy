@@ -1,0 +1,139 @@
+.stages {
+  position: relative;
+  background-color: $block;
+  color: $white;
+  margin-top: -141px;
+  padding-top: 247px;
+  padding-bottom: 79px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 18px;
+    right: 0;
+    width: 50%;
+    height: 1px;
+    background-color: rgba($orange2, 0.35);
+  }
+
+  & h2 {
+    position: relative;
+    font-weight: 600;
+    font-size: 27px;
+    line-height: 151%;
+    color: $white;
+    margin: 0 auto;
+    max-width: max-content;
+    text-align: center;
+    background-color: $block;
+    text-transform: uppercase;
+    padding: 0 20px;
+    margin-bottom: 80px;
+    z-index: 1;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-top: -73px;
+    padding-top: 177px;
+
+    & h2 {
+      margin-bottom: 75px;
+    }
+  }
+}
+
+.stages__items {
+  list-style: none;
+  counter-reset: list1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0;
+
+  @media (max-width: $tablet-width) {
+    max-width: 688px;
+  }
+}
+
+.stages__item {
+  position: relative;
+  padding-top: 115px;
+  width: 170px;
+  text-align: center;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 150%;
+
+  &:not(:last-of-type) {
+    margin-right: 80px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 30px;
+      right: -97px;
+      width: 114px;
+      height: 15px;
+      background-image: url("../img/icon/arrow-long.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &::before {
+    counter-increment: list1;
+    content: counter(list1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 151%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 65px;
+    height: 65px;
+    background-color: $orange;
+    border-radius: 50%;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 40px;
+
+    &:not(:last-of-type) {
+      margin-right: 89px;
+
+      &::after {
+        top: 25px;
+        right: -105px;
+      }
+    }
+
+    &:nth-child(3) {
+      margin-right: 0;
+
+      &::after {
+        content: none;
+      }
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 55px;
+    padding-top: 95px;
+    width: 280px;
+
+    &:not(:last-of-type) {
+      margin-right: 0;
+
+      &::after {
+        content: none;
+      }
+    }
+  }
+}
