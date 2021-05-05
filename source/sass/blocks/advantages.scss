@@ -9,7 +9,10 @@
     text-transform: uppercase;
     text-align: center;
     color: $head;
+    max-width: max-content;
+    margin: 0 auto;
     margin-bottom: 78px;
+    background-color: $white;
   }
 
   &::after {
@@ -17,18 +20,15 @@
     position: absolute;
     top: 18px;
     left: 0;
-    width: 37%;
+    width: 50%;
     height: 1px;
     background-color: rgba($orange2, 0.35);
+    z-index: -1;
   }
 
   @media (max-width: $tablet-width) {
     & h2 {
       padding-left: 48px;
-    }
-
-    &::after {
-      width: 30%;
     }
   }
 
