@@ -966,3 +966,71 @@ template {
     color: #121213;
     margin: 0;
     width: 100%; }
+
+@media (max-width: 1199px) {
+  .help {
+    padding: 0 34px; } }
+
+@media (max-width: 1199px) {
+  .help {
+    padding: 0 25px; } }
+
+.help__wrap {
+  max-width: 1170px;
+  margin: 0 auto;
+  min-height: 394px;
+  background-color: #ffffff;
+  box-shadow: 6px 9px 18px rgba(0, 0, 0, 0.22);
+  padding: 104px 501px 104px 100px;
+  background-image: url("../img/wrench-desktop@1x.png");
+  background-repeat: no-repeat;
+  background-position: 87% center; }
+  .help__wrap h2 {
+    font-weight: 600;
+    font-size: 27px;
+    line-height: 151%;
+    text-transform: uppercase;
+    color: #3d3e40;
+    margin: 0;
+    margin-bottom: 20px; }
+  .help__wrap p {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 180%;
+    color: #121213;
+    margin: 0; }
+  .help__wrap a {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 180%;
+    text-transform: uppercase;
+    color: #121213;
+    white-space: nowrap; }
+    .help__wrap a:hover, .help__wrap a:focus {
+      color: #f1520d; }
+  @media (max-width: 1199px) {
+    .help__wrap {
+      max-width: 100%;
+      padding: 74px 49px;
+      background-size: 179px 158px;
+      background-position: 90% 66%;
+      min-height: 300px; }
+      .help__wrap h2 {
+        width: 100%;
+        margin-bottom: 26px; }
+      .help__wrap p {
+        width: 65%; } }
+  @media (max-width: 767px) {
+    .help__wrap {
+      padding: 20px;
+      background-image: none;
+      min-height: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+      .help__wrap h2 {
+        font-size: 19px;
+        text-align: center; }
+      .help__wrap p {
+        width: 100%;
+        text-align: justify; } }
