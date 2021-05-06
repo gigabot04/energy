@@ -1353,6 +1353,8 @@ template {
     filter: drop-shadow(0px 4px 5px rgba(0, 0, 0, 0.2));
     margin-left: 34px;
     cursor: pointer; }
+  .feedback__form--error {
+    outline: 1px solid red; }
   @media (max-width: 1199px) {
     .feedback__form {
       max-width: 470px;
@@ -1542,3 +1544,32 @@ template {
   @media (max-width: 767px) {
     .footer__contact {
       display: none; } }
+
+.succsess {
+  max-width: 480px;
+  width: 100%;
+  min-height: 252px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-image: url("../img/icon/efficiency.svg");
+  background-repeat: no-repeat;
+  background-position: 0 center;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4); }
+  .succsess a {
+    color: #ffffff;
+    background-color: #f1520d;
+    padding: 5px 20px;
+    border-radius: 5px;
+    width: 50%;
+    margin: 0 auto; }
+
+.succsess-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  padding: 10px; }

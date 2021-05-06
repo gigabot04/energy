@@ -172,6 +172,10 @@
     cursor: pointer;
   }
 
+  &--error {
+    outline: 1px solid red;
+  }
+
   @media (max-width: $tablet-width) {
     max-width: 470px;
     margin: 0 auto;
