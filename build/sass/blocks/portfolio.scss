@@ -1,0 +1,134 @@
+.portfolio {
+  position: relative;
+  background-color: $bg-color;
+  color: $white;
+  padding: 104px 0;
+  margin-top: 123px;
+
+  & h2 {
+    position: relative;
+    font-weight: 600;
+    font-size: 27px;
+    line-height: 151%;
+    text-transform: uppercase;
+    text-align: center;
+    max-width: max-content;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    background-color: $bg-color;
+    z-index: 1;
+    padding: 0 20px;
+  }
+
+  & p {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 180%;
+    text-align: center;
+    margin: 0;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 123px;
+    right: 0;
+    width: 50%;
+    height: 1px;
+    background-color: rgba($orange2, 0.35);
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-top: 36px;
+
+    & h2 {
+      padding: 0 30px;
+      padding-right: 48px;
+    }
+
+    & p {
+      padding: 0 15px;
+      padding-right: 31px;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 50px 0;
+
+    & h2 {
+      padding: 0 30px;
+    }
+
+    & p {
+      padding: 0 15px;
+    }
+
+    &::after {
+      content: none;
+    }
+  }
+}
+
+.portfolio__container {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0 25px;
+  margin-top: 54px;
+
+  @media (max-width: $tablet-width) {
+    padding: 0 15px;
+    max-width: 100%;
+  }
+}
+
+.portfolio__wrapper--no-js {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  & .portfolio__slide {
+    width: 250px;
+    height: 250px;
+    margin: 20px;
+  }
+}
+
+.portfolio__slide {
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.portfolio__btn {
+  top: 47%;
+  width: 55px;
+  height: 55px;
+  background-color: rgba($black, 0.5);
+  border-radius: 50%;
+
+  &::after {
+    content: "";
+    width: 16px;
+    height: 16px;
+    font-family: none;
+    border: 3px solid rgba($white, 0.5);
+    border-bottom: none;
+    border-right: none;
+  }
+
+  &--left {
+    transform: rotate(-45deg);
+    left: -1px;
+  }
+
+  &--right {
+    transform: rotate(135deg);
+    right: -1px;
+  }
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}
