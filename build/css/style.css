@@ -788,7 +788,8 @@ template {
     max-width: max-content;
     margin: 0 auto;
     margin-bottom: 78px;
-    background-color: #ffffff; }
+    background-color: #ffffff;
+    padding: 0 20px; }
   .advantages::after {
     content: "";
     position: absolute;
@@ -873,7 +874,8 @@ template {
     margin: 0 auto;
     margin-bottom: 20px;
     background-color: #101010;
-    z-index: 1; }
+    z-index: 1;
+    padding: 0 20px; }
   .portfolio p {
     font-weight: 300;
     font-size: 16px;
@@ -964,7 +966,7 @@ template {
     position: absolute;
     top: 19px;
     left: 0;
-    width: 33%;
+    width: 50%;
     height: 1px;
     background-color: rgba(242, 112, 57, 0.35);
     z-index: -1; }
@@ -979,7 +981,8 @@ template {
     max-width: max-content;
     margin: 0 auto;
     margin-bottom: 80px;
-    background-color: #ffffff; }
+    background-color: #ffffff;
+    padding: 0 20px; }
   @media (max-width: 1199px) {
     .services {
       margin: 101px 0; }
