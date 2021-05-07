@@ -1,4 +1,5 @@
 .header {
+  position: relative;
   max-width: 1440px;
   padding: 40px 135px 0;
   margin: 0 auto;
@@ -41,7 +42,7 @@
       position: absolute;
       bottom: 0;
       left: 100%;
-      transition: 0.5s
+      transition: 0.5s;
     }
 
     &:hover,
@@ -85,6 +86,19 @@
         display: flex;
       }
     }
+
+    &--no-js {
+      position: relative;
+      display: block;
+      order: -1;
+      margin-bottom: 26px;
+      text-align: center;
+      width: 100%;
+
+      & .header__nav-contact {
+        display: flex;
+      }
+    }
   }
 
   @media (max-width: $mobile-width) {
@@ -94,6 +108,7 @@
 
 .header__nav-contact {
   display: none;
+
   @media (max-width: $tablet-width) {
     flex-direction: column;
     position: relative;

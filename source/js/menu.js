@@ -2,6 +2,7 @@
 {
   const btnMenu = document.querySelector(`.header__btn`);
   const navMenu = document.querySelector(`.header__nav`);
+  document.querySelector(`.header__nav--no-js`).classList.remove(`header__nav--no-js`);
   const body = document.querySelector(`.body`);
 
   btnMenu.addEventListener(`click`, (evt) => {

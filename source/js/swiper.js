@@ -1,5 +1,6 @@
 'use strict';
 {
+  document.querySelector(`.portfolio__wrapper--no-js`).classList.remove(`portfolio__wrapper--no-js`);
   const swiper = new Swiper('.swiper-container', {
     a11y: {
       enabled: true,

@@ -2,13 +2,13 @@
   position: relative;
   z-index: 1;
 
- @media (max-width: $tablet-width) {
-   padding: 0 34px;
- }
+  @media (max-width: $tablet-width) {
+    padding: 0 34px;
+  }
 
- @media (max-width: $mobile-width) {
-   padding: 0 25px;
- }
+  @media (max-width: $mobile-width) {
+    padding: 0 25px;
+  }
 }
 
 .help__wrap {
@@ -21,6 +21,18 @@
   background-image: url("../img/wrench-desktop@1x.png");
   background-repeat: no-repeat;
   background-position: 87% center;
+
+  @supports (background-image: url("../img/wrench-desktop@1x.webp")) {
+    background-image: url("../img/wrench-desktop@1x.webp");
+  }
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/wrench-desktop@2x.png");
+
+    @supports (background-image: url("../img/wrench-desktop@2x.webp")) {
+      background-image: url("../img/wrench-desktop@2x.webp");
+    }
+  }
 
   & h2 {
     font-weight: 600;
@@ -87,7 +99,7 @@
 
     p {
       width: 100%;
-      text-align:justify;
+      text-align: justify;
     }
   }
 }

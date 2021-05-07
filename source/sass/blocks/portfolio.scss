@@ -17,7 +17,6 @@
     margin-bottom: 20px;
     background-color: $bg-color;
     z-index: 1;
-
   }
 
   & p {
@@ -78,6 +77,18 @@
   @media (max-width: $tablet-width) {
     padding: 0 15px;
     max-width: 100%;
+  }
+}
+
+.portfolio__wrapper--no-js {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  & .portfolio__slide {
+    width: 250px;
+    height: 250px;
+    margin: 20px;
   }
 }
 

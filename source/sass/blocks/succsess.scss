@@ -8,11 +8,9 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-
-  background-image: url('../img/icon/efficiency.svg');
+  background-image: url("../img/icon/efficiency.svg");
   background-repeat: no-repeat;
   background-position: 0 center;
-
   box-shadow: 5px 5px 10px rgba($black, 0.4);
 
   & a {

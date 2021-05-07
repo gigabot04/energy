@@ -15,7 +15,7 @@
         <use xlink:href="img/sprite.svg#logo"></use>
       </svg>
     </div>
-    <nav class="header__nav">
+    <nav class="header__nav header__nav--no-js" id="menu">
       <a href="#head">Главная</a>
       <a href="#advantages">О нас</a>
       <a href="#portfolio">Портфолио</a>
@@ -26,10 +26,10 @@
         <a href="tel:89313355625">8-(931)-335-56-25</a>
       </div>
     </nav>
-    <button type="button" class="header__btn">
+    <a href="#menu" class="header__btn">
       <span class="visually-hidden">Открыть меню</span>
       <span class="visually-hidden">Закрыть меню</span>
-    </button>
+    </a>
   </header>
   <main>
     <section class="basic" id="head">
@@ -108,18 +108,87 @@
       <h2>Порфолио наших работ </h2>
       <p>Гарантируем качество исполнения, оригинальные запчасти и доступную стоимость</p>
       <div class="portfolio__container swiper-container">
-        <div class="swiper-wrapper">
+        <div class="portfolio__wrapper--no-js swiper-wrapper">
           <div class="portfolio__slide swiper-slide">
-            <img src="img/work1-desktop@1x.jpg" alt="work photo">
+            <picture>
+              <source srcset="img/work1-desktop@1x.webp 1x, img/work1-desktop@2x.webp 2x" type="image/webp">
+              <img src="img/work1-desktop@1x.jpg" srcset="img/work1-desktop@2x.jpg 2x" alt="work photo">
+            </picture>
+
           </div>
           <div class="portfolio__slide swiper-slide">
-            <img src="img/work2-desktop@1x.jpg" alt="work photo">
+            <picture>
+              <source srcset="img/work2-desktop@1x.webp 1x, img/work2-desktop@2x.webp 2x" type="image/webp">
+              <img src="img/work2-desktop@1x.jpg" srcset="img/work2-desktop@2x.jpg 2x" alt="work photo">
+            </picture>
+
           </div>
           <div class="portfolio__slide swiper-slide">
-            <img src="img/work4-desktop.jpg" alt="work photo">
+            <picture>
+              <source srcset="img/work4-desktop.webp 1x, img/work4-desktop@2x.webp 2x" type="image/webp">
+              <img src="img/work4-desktop.jpg" srcset="img/work4-desktop@2x.jpg 2x" alt="work photo">
+            </picture>
+
           </div>
           <div class="portfolio__slide swiper-slide">
-            <img src="img/work3-desktop@1x.jpg" alt="work photo">
+            <picture>
+              <source srcset="img/work3-desktop@1x.webp 1x, img/work3-desktop@2x.webp 2x" type="image/webp">
+              <img src="img/work3-desktop@1x.jpg" srcset="img/work3-desktop@2x.jpg 2x" alt="work photo">
+            </picture>
+          </div>
+          <div class="portfolio__slide swiper-slide">
+            <picture>
+              <source srcset="img/work5-desktop@1x.webp 1x, img/work5-desktop@2x.webp 2x" type="image/webp">
+              <img src="img/work5-desktop@1x.jpg" srcset="img/work5-desktop@2x.jpg 2x" alt="work photo">
+            </picture>
+          </div>
+          <div class="portfolio__slide swiper-slide">
+            <picture>
+              <source srcset="img/work6-desktop@1x.webp 1x, img/work6-desktop@2x.webp 2x" type="image/webp">
+              <img src="img/work6-desktop@1x.jpg" srcset="img/work6-desktop@2x.jpg 2x" alt="work photo">
+            </picture>
+          </div>
+          <div class="portfolio__slide swiper-slide">
+            <picture>
+              <source srcset="img/work7-desktop@1x.webp 1x, img/work7-desktop@2x.webp 2x" type="image/webp">
+              <img src="img/work7-desktop@1x.jpg" srcset="img/work7-desktop@2x.jpg 2x" alt="work photo">
+            </picture>
+          </div>
+          <div class="portfolio__slide swiper-slide">
+            <picture>
+              <source srcset="img/work8-desktop@1x.webp 1x, img/work8-desktop@2x.webp 2x" type="image/webp">
+              <img src="img/work8-desktop@1x.jpg" srcset="img/work8-desktop@2x.jpg 2x" alt="work photo">
+            </picture>
+          </div>
+          <div class="portfolio__slide swiper-slide">
+            <picture>
+              <source srcset="img/work9-desktop@1x.webp 1x, img/work9-desktop@2x.webp 2x" type="image/webp">
+              <img src="img/work9-desktop@1x.jpg" srcset="img/work9-desktop@2x.jpg 2x" alt="work photo">
+            </picture>
+          </div>
+          <div class="portfolio__slide swiper-slide">
+            <picture>
+              <source srcset="img/work10-desktop@1x.webp 1x, img/work10-desktop@2x.webp 2x" type="image/webp">
+              <img src="img/work10-desktop@1x.jpg" srcset="img/work10-desktop@2x.jpg 2x" alt="work photo">
+            </picture>
+          </div>
+          <div class="portfolio__slide swiper-slide">
+            <picture>
+              <source srcset="img/work11-desktop@1x.webp 1x, img/work11-desktop@2x.webp 2x" type="image/webp">
+              <img src="img/work11-desktop@1x.jpg" srcset="img/work11-desktop@2x.jpg 2x" alt="work photo">
+            </picture>
+          </div>
+          <div class="portfolio__slide swiper-slide">
+            <picture>
+              <source srcset="img/work12-desktop@1x.webp 1x, img/work12-desktop@2x.webp 2x" type="image/webp">
+              <img src="img/work12-desktop@1x.jpg" srcset="img/work12-desktop@2x.jpg 2x" alt="work photo">
+            </picture>
+          </div>
+          <div class="portfolio__slide swiper-slide">
+            <picture>
+              <source srcset="img/work13-desktop@1x.webp 1x, img/work13-desktop@2x.webp 2x" type="image/webp">
+              <img src="img/work13-desktop@1x.jpg" srcset="img/work13-desktop@2x.jpg 2x" alt="work photo">
+            </picture>
           </div>
         </div>
         <div class="portfolio__btn portfolio__btn--left swiper-button-prev"></div>

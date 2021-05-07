@@ -16,6 +16,7 @@
   "author": "SAFONOV [https://github.com/gigabot04]",
   "license": "ISC",
   "devDependencies": {
+    "@htmlacademy/editorconfig-cli": "^1.0.0",
     "autoprefixer": "^10.2.5",
     "browser-sync": "^2.26.14",
     "del": "^6.0.0",
