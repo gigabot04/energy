@@ -1,0 +1,119 @@
+.services {
+  position: relative;
+  margin: 101px 0;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 19px;
+    left: 0;
+    width: 50%;
+    height: 1px;
+    background-color: rgba($orange2, 0.35);
+    z-index: -1;
+  }
+
+  & h2 {
+    font-weight: 600;
+    font-size: 27px;
+    line-height: 151%;
+    text-transform: uppercase;
+    text-align: center;
+    max-width: max-content;
+    margin: 0 auto;
+    margin-bottom: 80px;
+    background-color: $white;
+    padding: 0 20px;
+  }
+
+
+  @media (max-width: $tablet-width) {
+    margin: 101px 0;
+
+    & h2 {
+      padding-left: 48px;
+    }
+
+    &::after {
+      width: 29%;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    margin: 55px 0;
+
+    & h2 {
+      padding-left: 0;
+    }
+
+    &::after {
+      content: none;
+    }
+  }
+}
+
+.services__wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 75px 0;
+  display: grid;
+  justify-content: space-around;
+  grid-template-columns: 270px 270px 270px;
+  row-gap: 80px;
+
+  @media (max-width: $tablet-width) {
+    padding: 0 74px 0;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    column-gap: 80px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 0 23px 0;
+    grid-template-columns: 1fr;
+    row-gap: 15px;
+  }
+}
+
+.services__item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: flex-start;
+  width: 100%;
+  min-width: 270px;
+  box-shadow: 6px 9px 18px rgba($black, 0.06);
+  padding: 44px 23px 30px;
+
+  & a {
+    width: 72px;
+    height: 34px;
+    background-color: $white;
+    border: 1px solid $border;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+  }
+
+  & h3 {
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 151.5%;
+    text-transform: uppercase;
+    color: $head;
+    margin: 0;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  & p {
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 180%;
+    color: $block;
+    margin: 0;
+    width: 100%;
+  }
+}
