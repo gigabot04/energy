@@ -94,6 +94,15 @@
     align-items: center;
     justify-content: center;
     align-self: center;
+
+    &:hover,
+    &:focus {
+      border: 1px solid rgba($head, 0.5);
+    }
+
+    &:active {
+      border: 1px solid rgba($border, 0.3);
+    }
   }
 
   & h3 {

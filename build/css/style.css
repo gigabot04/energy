@@ -654,6 +654,10 @@ template {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap; }
+  .basic__foo a:hover svg, .basic__foo a:focus svg {
+    opacity: 0.7; }
+  .basic__foo a:active svg {
+    opacity: 0.5; }
 
 .basic__arrow {
   -webkit-animation: arrow-down 1s ease-in-out infinite;
@@ -661,6 +665,10 @@ template {
 
 .basic__contact a {
   margin-left: 30px; }
+  .basic__contact a:hover svg, .basic__contact a:focus svg {
+    opacity: 0.7; }
+  .basic__contact a:active svg {
+    opacity: 0.5; }
 
 .basic__contact svg {
   width: 23px;
@@ -760,6 +768,10 @@ template {
     background-color: #f1520d;
     border-radius: 9px;
     margin-top: 22px; }
+    .connect__wrap a:hover, .connect__wrap a:focus {
+      background-color: rgba(241, 82, 13, 0.85); }
+    .connect__wrap a:active {
+      background-color: #3d3e40; }
   @media (max-width: 767px) {
     .connect__wrap {
       text-align: center;
@@ -940,6 +952,10 @@ template {
   height: 55px;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 50%; }
+  .portfolio__btn:hover, .portfolio__btn:focus {
+    background-color: black; }
+  .portfolio__btn:active {
+    background-color: rgba(0, 0, 0, 0.3); }
   .portfolio__btn::after {
     content: "";
     width: 16px;
@@ -1037,6 +1053,10 @@ template {
     align-items: center;
     justify-content: center;
     align-self: center; }
+    .services__item a:hover, .services__item a:focus {
+      border: 1px solid rgba(61, 62, 64, 0.5); }
+    .services__item a:active {
+      border: 1px solid rgba(217, 217, 217, 0.3); }
   .services__item h3 {
     font-weight: 500;
     font-size: 17px;
@@ -1306,6 +1326,12 @@ template {
     height: 40px;
     padding-left: 25px;
     margin-bottom: 30px; }
+    .feedback__form input:hover {
+      background-color: #ebebeb;
+      border: 1px solid #ebebeb; }
+    .feedback__form input:active, .feedback__form input:focus {
+      background-color: #ffffff;
+      border: 1px solid #dddddd; }
     .feedback__form input::-moz-placeholder {
       font-weight: 300;
       font-size: 13px;
@@ -1338,6 +1364,10 @@ template {
     vertical-align: middle;
     padding-left: 27px;
     cursor: pointer; }
+    .feedback__form label[for="check"]:hover::after, .feedback__form label[for="check"]:focus::after {
+      background-color: rgba(61, 62, 64, 0.5); }
+    .feedback__form label[for="check"]:active::after {
+      background-color: #f0f2f2; }
     .feedback__form label[for="check"]::after {
       content: "";
       position: absolute;
@@ -1372,6 +1402,12 @@ template {
     resize: none;
     padding: 10px 25px;
     margin-bottom: 24px; }
+    .feedback__form textarea:hover {
+      background-color: #ebebeb;
+      border: 1px solid #ebebeb; }
+    .feedback__form textarea:active, .feedback__form textarea:focus {
+      background-color: #ffffff;
+      border: 1px solid #dddddd; }
     .feedback__form textarea::-moz-placeholder {
       font-weight: 300;
       font-size: 13px;
@@ -1403,6 +1439,10 @@ template {
     filter: drop-shadow(0 4px 5px rgba(0, 0, 0, 0.2));
     margin-left: 34px;
     cursor: pointer; }
+    .feedback__form button:hover, .feedback__form button:focus {
+      background-color: rgba(241, 82, 13, 0.85); }
+    .feedback__form button:active {
+      background-color: #3d3e40; }
   .feedback__form--error {
     outline: 1px solid red; }
   @media (max-width: 1199px) {
@@ -1536,11 +1576,26 @@ template {
   justify-content: space-between;
   margin-bottom: 7px; }
   .footer__nav a {
+    position: relative;
     color: #ffffff;
     font-weight: normal;
     font-size: 12px;
     line-height: 15px;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    overflow: hidden; }
+    .footer__nav a::after {
+      content: "";
+      width: 100%;
+      height: 1px;
+      background-color: #f1520d;
+      position: absolute;
+      bottom: 0;
+      left: 100%;
+      transition: 0.5s; }
+    .footer__nav a:hover::after, .footer__nav a:focus::after {
+      left: 0; }
+    .footer__nav a:active {
+      color: rgba(221, 221, 221, 0.7); }
   @media (max-width: 1199px) {
     .footer__nav {
       flex-direction: column;
@@ -1569,6 +1624,10 @@ template {
     display: none; }
   .footer__contact a {
     color: #ffffff; }
+    .footer__contact a:hover, .footer__contact a:focus {
+      opacity: 0.7; }
+    .footer__contact a:active {
+      opacity: 0.4; }
   .footer__contact span {
     display: none; }
   @media (max-width: 1199px) {

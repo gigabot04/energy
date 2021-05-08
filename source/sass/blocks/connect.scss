@@ -54,6 +54,15 @@
     background-color: $orange;
     border-radius: 9px;
     margin-top: 22px;
+
+    &:hover,
+    &:focus {
+      background-color: rgba($orange, 0.85);
+    }
+
+    &:active {
+      background-color: $head;
+    }
   }
 
   @media (max-width: $mobile-width) {

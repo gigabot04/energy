@@ -69,6 +69,17 @@
     padding-left: 25px;
     margin-bottom: 30px;
 
+    &:hover {
+      background-color: $inputHover;
+      border: 1px solid $inputHover;
+    }
+
+    &:active,
+    &:focus {
+      background-color: $white;
+      border: 1px solid $light-grey;
+    }
+
     &::placeholder {
       font-weight: 300;
       font-size: 13px;
@@ -100,6 +111,19 @@
     vertical-align: middle;
     padding-left: 27px;
     cursor: pointer;
+
+    &:hover,
+    &:focus {
+      &::after {
+        background-color: rgba($head, 0.5);
+      }
+    }
+
+    &:active {
+      &::after {
+        background-color: $input;
+      }
+    }
 
     &::after {
       content: "";
@@ -145,6 +169,17 @@
     padding: 10px 25px;
     margin-bottom: 24px;
 
+    &:hover {
+      background-color: $inputHover;
+      border: 1px solid $inputHover;
+    }
+
+    &:active,
+    &:focus {
+      background-color: $white;
+      border: 1px solid $light-grey;
+    }
+
     &::placeholder {
       font-weight: 300;
       font-size: 13px;
@@ -169,6 +204,15 @@
     filter: drop-shadow(0 4px 5px rgba($black, 0.2));
     margin-left: 34px;
     cursor: pointer;
+
+    &:hover,
+    &:focus {
+      background-color: rgba($orange, 0.85);
+    }
+
+    &:active {
+      background-color: $head;
+    }
   }
 
   &--error {
