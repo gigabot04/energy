@@ -1,1 +1,104 @@
-"use strict";{const a=document.querySelector('input[name="tel"]'),b=document.querySelector(".feedback__form button"),c=document.querySelector('.feedback__form input[type="checkbox"]'),d=document.querySelector('.feedback__form label[for="check"]'),e=document.querySelector("input#name"),f=t=>{"ArrowLeft"!==t.key&&"ArrowRight"!==t.key&&"Backspace"!==t.key&&"Tab"!==t.key&&t.preventDefault();var o="+7 (111) 111-11-11";if(/[0-9\+\ \-\(\)]/.test(t.key)){let r=a.value;var s=r.length;if(/[0-9]/.test(t.key))if("1"===o[s])a.value=r+t.key;else for(let e=s;e<o.length;e++){if("1"===o[e]){a.value=r+t.key;break}r+=o[e]}}},g=r=>{c.checked&&18===a.value.length&&e.value||(c.checked?d.classList.remove("feedback__form--error"):(r.preventDefault(),d.classList.add("feedback__form--error")),18!==a.value.length?(r.preventDefault(),a.classList.add("feedback__form--error")):a.classList.remove("feedback__form--error"),e.value?e.classList.remove("feedback__form--error"):e.classList.add("feedback__form--error"))};b.addEventListener("click",g),a.addEventListener("keydown",f)}{const n=document.querySelector(".header__btn"),o=document.querySelector(".header__nav");document.querySelector(".header__nav--no-js").classList.remove("header__nav--no-js");const p=document.querySelector(".body");n.addEventListener("click",e=>{e.preventDefault(),n.classList.toggle("header__btn--active"),o.classList.toggle("header__nav--active"),p.classList.toggle("body__js")})}{document.querySelector(".portfolio__wrapper--no-js").classList.remove("portfolio__wrapper--no-js");const r=new Swiper(".swiper-container",{a11y:{enabled:!0},spaceBetween:30,breakpoints:{320:{slidesPerView:1.6,slidesPerGroup:1},768:{navigation:!1,slidesPerView:2.5,slidesPerGroup:2,freeMode:!0,loop:!1},1200:{navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"},slidesPerView:4,slidesPerGroup:4,freeMode:!1,loop:!0}}});r()}
+'use strict';
+{
+  const phoneInput = document.querySelector(`input[name="tel"]`);
+  const submitBtnFeedback = document.querySelector(`.feedback__form button`);
+  const inputCheckbox = document.querySelector(`.feedback__form input[type="checkbox"]`);
+  const labelCheckbox = document.querySelector(`.feedback__form label[for="check"]`);
+  const inputName = document.querySelector(`input#name`);
+  const masks = (event) => {
+    if (!(event.key === `ArrowLeft` || event.key === `ArrowRight` || event.key === `Backspace` || event.key === `Tab`)) {
+      event.preventDefault();
+    }
+    const mask = `+7 (111) 111-11-11`;
+
+    if (/[0-9\+\ \-\(\)]/.test(event.key)) {
+      let currentString = phoneInput.value;
+      let currentLength = currentString.length;
+      if (/[0-9]/.test(event.key)) {
+        if (mask[currentLength] === `1`) {
+          phoneInput.value = currentString + event.key;
+        } else {
+          for (let i = currentLength; i < mask.length; i++) {
+            if (mask[i] === `1`) {
+              phoneInput.value = currentString + event.key;
+              break;
+            }
+            currentString += mask[i];
+          }
+        }
+      }
+    }
+  };
+  const validity = (evt) => {
+    if (!inputCheckbox.checked || phoneInput.value.length !== 18 || !inputName.value) {
+      if (!inputCheckbox.checked) {
+        evt.preventDefault();
+        labelCheckbox.classList.add(`feedback__form--error`);
+      } else {
+        labelCheckbox.classList.remove(`feedback__form--error`);
+      }
+      if (phoneInput.value.length !== 18) {
+        evt.preventDefault();
+        phoneInput.classList.add(`feedback__form--error`);
+      } else {
+        phoneInput.classList.remove(`feedback__form--error`);
+      }
+      if (!inputName.value) {
+        inputName.classList.add(`feedback__form--error`);
+      } else {
+        inputName.classList.remove(`feedback__form--error`);
+      }
+    }
+  };
+  submitBtnFeedback.addEventListener(`click`, validity);
+  phoneInput.addEventListener(`keydown`, masks);
+}
+
+'use strict';
+{
+  const btnMenu = document.querySelector(`.header__btn`);
+  const navMenu = document.querySelector(`.header__nav`);
+  document.querySelector(`.header__nav--no-js`).classList.remove(`header__nav--no-js`);
+  const body = document.querySelector(`.body`);
+
+  btnMenu.addEventListener(`click`, (evt) => {
+    evt.preventDefault();
+    btnMenu.classList.toggle(`header__btn--active`);
+    navMenu.classList.toggle(`header__nav--active`);
+    body.classList.toggle(`body__js`);
+  });
+}
+
+'use strict';
+{
+  document.querySelector(`.portfolio__wrapper--no-js`).classList.remove(`portfolio__wrapper--no-js`);
+  const swiper = new Swiper('.swiper-container', {
+    a11y: {
+      enabled: true,
+    },
+    spaceBetween: 30,
+    breakpoints: {
+      320: {
+        slidesPerView: 1.6,
+        slidesPerGroup: 1,
+      },
+      768: {
+        navigation: false,
+        slidesPerView: 2.5,
+        slidesPerGroup: 2,
+        freeMode: true,
+        loop: false
+      },
+      1200: {
+        navigation: {
+          nextEl: `.swiper-button-next`,
+          prevEl: `.swiper-button-prev`
+        },
+        slidesPerView: 4,
+        slidesPerGroup: 4,
+        freeMode: false,
+        loop: true
+      }
+    }
+  });
+}
