@@ -11,4 +11,13 @@
     navMenu.classList.toggle(`header__nav--active`);
     body.classList.toggle(`body__js`);
   });
+
+  navMenu.addEventListener(`click`, (evt) => {
+    let target = evt.target;
+    if (target.tagName === `A`) {
+      btnMenu.classList.remove(`header__btn--active`);
+      navMenu.classList.remove(`header__nav--active`);
+      body.classList.remove(`body__js`);
+    }
+  });
 }
