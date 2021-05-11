@@ -1611,7 +1611,8 @@ template {
           margin-bottom: 10px; } }
   @media (max-width: 767px) {
     .footer__nav {
-      margin-top: 40px; }
+      margin-top: 40px;
+      margin-bottom: 30px; }
       .footer__nav a {
         font-size: 18px;
         text-align: center; }
@@ -1655,7 +1656,14 @@ template {
         text-decoration: underline; } }
   @media (max-width: 767px) {
     .footer__contact {
-      display: none; } }
+      width: 92px;
+      flex-direction: row; }
+      .footer__contact h2 {
+        display: none; }
+      .footer__contact svg {
+        display: inline; }
+      .footer__contact span {
+        display: none; } }
 
 .succsess {
   max-width: 480px;
