@@ -1499,38 +1499,43 @@ template {
   font-size: 16px;
   line-height: 180%;
   color: #2c2c2c;
-  width: 442px;
+  width: 578px;
   display: flex;
   justify-content: space-between;
   margin: 0;
   margin-top: 12px; }
+  .feedback__contact p:nth-child(4) a {
+    text-transform: none; }
 
 .feedback__contact a {
   font-weight: 300;
   font-size: 16px;
   line-height: 180%;
   color: #2c2c2c;
-  white-space: nowrap;
   text-align: start;
   text-transform: uppercase;
-  width: 190px; }
+  width: 308px; }
   .feedback__contact a:hover, .feedback__contact a:focus {
     color: #f1520d; }
 
 @media (max-width: 1199px) {
-  .feedback__contact h2 {
-    margin-bottom: 68px; }
-  .feedback__contact p {
-    margin: 0 auto;
-    width: 364px;
-    display: inline-block; }
-  .feedback__contact a {
-    display: block;
-    margin: 0 auto;
-    width: -webkit-max-content;
-    width: -moz-max-content;
-    width: max-content;
-    margin-top: 10px; } }
+  .feedback__contact {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start; }
+    .feedback__contact h2 {
+      margin-bottom: 68px;
+      width: 100%; }
+    .feedback__contact p {
+      margin: 0 auto;
+      width: 364px;
+      display: inline-block; }
+    .feedback__contact a {
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+      margin-top: 10px; } }
 
 @media (max-width: 767px) {
   .feedback__contact h2 {
@@ -1543,10 +1548,8 @@ template {
   .feedback__contact a {
     display: block;
     margin: 0 auto;
-    width: -webkit-max-content;
-    width: -moz-max-content;
-    width: max-content;
-    margin-top: 10px; } }
+    margin-top: 10px;
+    width: 280px; } }
 
 .footer {
   background-color: #101010;
@@ -1619,7 +1622,7 @@ template {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  width: 62px; }
+  width: 92px; }
   .footer__contact h2 {
     display: none; }
   .footer__contact a {
